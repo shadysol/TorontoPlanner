@@ -4,33 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YelpCamp</title>
+    <title>TorontoPlanner</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <link rel="stylesheet" href="/stylesheets/home.css">
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="/stylesheets/app.css">
+
+
 </head>
 
-<body class="d-flex text-center text-white bg-dark">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-         
-        </header>
-        <main class="px-3">
-            <h1>TorontoPlanner</h1>
-            <p class="lead"> Welcome to TorontoPlanner! <br> Let us plan your day in Toronto<br>
-                Tell us what you're interested in, and we'll match you with the suggestions that match your preferences</p>
-            <a href="/planner" class="btn btn-lg btn-secondary font-weight-bold border-white bg-white">
-                Lets get Started</a>
-        </main>
-
-        <footer class="mt-auto text-white-50">
-            <p>&copy; 2020 </p>
-        </footer>
-
-
-    </div>
-
-
+<body class="d-flex flex-column vh-100">
+   
+    <main class="container mt-5">
+      
+        <%- body %>
+    </main>
+    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
