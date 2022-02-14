@@ -1,17 +1,31 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TorontoPlanner</title>
+    <!-- Link to Bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+    </head>
+    
 
-<div class="row">
-    <h1 class="text-center">Let us plan your day</h1>
-    <div class="col-md-6 offset-md-3">
-        <form action="/plannerForm" method="POST" novalidate class="validated-form" enctype="application/x-www-form-urlencoded">
-            <div class="mb-3">
-                <label class="form-label" for="location">Enter a location</label>
-                <input class="form-control" type="text" id="location" name="location" required>
-                
-            </div>
 
-            <div class="mb-3">
-                <button class="btn btn-success">Submit</button>
-            </div>
-        </form>
-    </div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 mx-auto">
+			<h3>Let us suggest a place to eat</h3>
+            <form action="/plannerForm" method="POST" novalidate class="validated-form" enctype="application/x-www-form-urlencoded">
+					<div class="form-group">
+						<label for="Location">Enter a location</label>
+						<input type="text" class="form-control" id="nameInput" name="location" placeholder="name">
+					</div>
+					<div class="form-group">
+						<label for="priceInput">Max Distance</label>
+						<input type="number" class="form-control" id="priceInput" name="distance" placeholder="price" min="100" step="10">
+					</div>
+					
+					<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+				</form>
+				
+		</div>
+	</div>
 </div>
