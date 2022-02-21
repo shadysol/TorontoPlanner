@@ -1,18 +1,27 @@
-<div class='row'>
-    <div class='column'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TorontoPlanner</title>
+    <!-- Link to Bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
 
 
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">title</h5>
-                <p class="card-text">description</p>
+<div class="container">
+    <div class="row">
+        
+        <div class="col-12">
+            <div class="card">
+                <img src="<%= resturaunt.image_url %>" id="coverCard" class="card-image-top img-fluid">
+                <div class="card-body">
+                    <h4 class="float-right">$<%= resturaunt.price %>/night</h4>
+                    <h2 class="card-title"><a><%= resturaunt.name %></a></h4>
+                    <p class="card-text"><%= resturaunt.location.address1 %></p>
+                   
+                </div>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item text-muted"><%= location%></li>
-            </ul>
+           
         </div>
-
-    </div>
-
     </div>
 </div>
+

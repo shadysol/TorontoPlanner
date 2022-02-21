@@ -10,28 +10,40 @@
 
 <div class="container">
 	<header class="jumbotron">
-		<h1 class="display-3">Welcome to YelpCamp.</h1>
-		<p class="lead">View our handpicked campgrounds from all over!</p>
-		<p><a href="/campgrounds/new" class="btn btn-primary btn-lg">Add a new campground</a></p>
+		<h2 class="display-3">Here are your top 5 suggestions</h2>
 	</header>
-	<div class="row">
-		<div class="col-12">
-			<h3>Our most popular campgrounds</h3>
-		</div>
-	</div>
-	<div class="row text-center" style="display:flex; flex-wrap: wrap;">
-		<% resturaunts.forEach(function(resturaunt) { %>
-			<div class="col-md-3 col-sm-6">
-				<div class="card">
-					<img src="<%= resturaunt.image_url %>" class="card-img-top">
+	
+	<div class="row text-center" >
+
+
+		
+
+		<% for (var j = 0; j < resturaunts.length; j++) { %>
+			<div class="col-md-6 col-sm-12">
+				<div class="card" style="width:30rem;">
+					<img src="<%= resturaunts[j].image_url %>" class="card-img-top" style="width:fluid;height:420px;">
 					<div class="card-body">
-						<h5 class="card-title"><%= resturaunt.name %></h5>
-						<p class="text-right">
-							<a href="/" class="btn btn-primary btn-sm">More info</a>
-						</p>
+						<h4 class="card-title"><%= resturaunts[j].name %></h4>
+						<h4 class="card-title"><%= j+1 %></h4>
+						
+                            <p>
+                            <h6>category: <%= resturaunts[j].categories[0].title %> , <%= resturaunts[j].categories[1].title %> </h6>	
+                            </p>
+                            <p>
+                                <h6>price: <%= resturaunts[j].price%></h6>	
+                                </p>
+                        <p>
+                            <form action="/planner/<%=j%>" method="POST" novalidate class="validated-form" enctype="application/x-www-form-urlencoded">
+								<button type="submit" name="" class="btn btn-danger ">More Info?</button>
+							</form>
+                        </p>
+
+						<form action="/planner/<%=j%>" method="POST" novalidate class="validated-form" enctype="application/x-www-form-urlencoded">
+							<button type="submit" name="" class="btn btn-danger">Not Interested?</button>
+						</form>
 					</div>
 				</div>
 			</div>
-		<% }) %>
+		<% }%>
 	</div>
 </div>
