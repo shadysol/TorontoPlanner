@@ -27,11 +27,18 @@
 						<h4 class="card-title"><%= j+1 %></h4>
 						
                             <p>
-                            <h6>category: <%= resturaunts[j].categories[0].title %> , <%= resturaunts[j].categories[1].title %> </h6>	
+								<h6>category: 
+								<% for (var i = 0; i < resturaunts[j].categories.length; i++) { %>
+                                 <% if (i == +resturaunts[j].categories.length-1) { %>
+									<%= resturaunts[j].categories[i].title %>
+									<% } else { %>  
+										<%= resturaunts[j].categories[i].title%> ,
+											<% } 	
+											   }%> 	
+						</h6>
                             </p>
                             <p>
                                 <h6>price: <%= resturaunts[j].price%></h6>	
-                                </p>
                         <p>
                             <form action="/planner/<%=j%>" method="POST" novalidate class="validated-form" enctype="application/x-www-form-urlencoded">
 								<button type="submit" name="" class="btn btn-danger ">More Info?</button>

@@ -43,7 +43,7 @@ app.get('/form', (req, res) => {
      // longitude: '-79.59891379095171',
       radius: req.body.distance,
       sort_by: 'rating',
-      limit: 5
+      limit: 10
     
     };
 
